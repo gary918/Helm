@@ -20,8 +20,10 @@ Click http://localhost:<Your Port>/.ws to access the echo-server.
 - Remember to enable RBAC
 ## Helm Installation and Configuration on Windows 10
 Refer to [Installing Helm](https://helm.sh/docs/using_helm/)
-- `choco install kubernetes-helm`
-- `helm version`
+```
+choco install kubernetes-helm
+helm version
+```
 ## Write a Simple Helm Chart
 Create your own helm chart.
 ```
@@ -32,6 +34,7 @@ Creating samplechart
 ```
 Then your samplechart directory will look like the following:
 <img src="image/chart-dir.jpg" alt="">
+
 Edit values.yaml, deployment.yaml and service.yaml.
 
 Verify dependencies and templates.
