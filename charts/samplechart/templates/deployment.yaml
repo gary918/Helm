@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{ include "samplechart.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "samplechart.name" . }}
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          name: {{ .Chart.Name }}
+          ports:
+            - containerPort: {{ .Values.service.target_port }}
+          env:
+            - name: cloud
+              value: "azure"
