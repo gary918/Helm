@@ -30,6 +30,8 @@ C:\<Your Path>>cd charts
 C:\<Your Path>\charts> helm create samplechart
 Creating samplechart
 ```
+Then your samplechart directory will look like the following:
+<img src="image/chart-dir.jpg" alt="">
 Edit values.yaml, deployment.yaml and service.yaml.
 
 Verify dependencies and templates.
